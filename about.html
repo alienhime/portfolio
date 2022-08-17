@@ -57,13 +57,6 @@
   								<h2>Get in touch</h2>
   								<form method="post" action="https://getform.io/f/fd501fff-67ea-4af3-bbf2-56b1dbaedb61">
 										<input type="hidden" id="captchaResponse" name="g-recaptcha-response">
-										<script>
-											grecaptcha.enterprise.ready(function() {
-											    grecaptcha.enterprise.execute('6LcwMYQhAAAAADu2zUhD8HkJa1Cg5aaIBuljegA8', {action: 'homepage'}).then(function(token) {
-											       document.getElementById('captchaResponse').value = token;
-											    });
-											});
-										</script>
   									<div class="fields">
   										<div class="field half">
   											<input type="text" name="name" id="name" placeholder="Name" />
@@ -109,6 +102,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/captcha.js"></script>
 
 	</body>
 </html>

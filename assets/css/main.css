@@ -23,6 +23,10 @@
   font-size: 17px;
 }
 
+.grecaptcha-badge {
+  display: none;
+}
+
 .aboutme h1 {
   color: #f2849e;
 }
