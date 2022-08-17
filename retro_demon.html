@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://www.google.com/recaptcha/enterprise.js?render=6LcwMYQhAAAAADu2zUhD8HkJa1Cg5aaIBuljegA8"></script>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -171,6 +172,14 @@
   							<section>
   								<h2>Get in touch</h2>
   								<form method="post" action="https://getform.io/f/fd501fff-67ea-4af3-bbf2-56b1dbaedb61">
+										<input type="hidden" id="captchaResponse" name="g-recaptcha-response">
+										<script>
+											grecaptcha.enterprise.ready(function() {
+											    grecaptcha.enterprise.execute('6LcwMYQhAAAAADu2zUhD8HkJa1Cg5aaIBuljegA8', {action: 'login'}).then(function(token) {
+											       document.getElementById('captchaResponse').value = token;
+											    });
+											});
+										</script>
   									<div class="fields">
   										<div class="field half">
   											<input type="text" name="name" id="name" placeholder="Name" />
